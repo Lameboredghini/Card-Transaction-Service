@@ -1,0 +1,11 @@
+node_modules
+*.env
+**/.nyc_output
+.vscode
+.deployment
+**/.DS_Store
+.npmrc
+
+*.log
+*.csv
+dist
