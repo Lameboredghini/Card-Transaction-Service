@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import UserController from '../controllers/userController';
 import CardController from '../controllers/cardDataController';
+import TransactionController from '../controllers/transactionsController';
 
 const router = Router();
 
@@ -19,10 +20,10 @@ router.post('/cards/update', CardController.updateCardDetails);
 
 // transaction routes
 
-// router.post("/", TransactionController.createTransaction);
-// router.get("/:id", TransactionController.getTransaction);
-// router.get("/", TransactionController.getAllTransactions);
-// router.patch("/:id", TransactionController.updateTransactionStatus);
-// router.delete("/:id", TransactionController.deleteTransaction);
+router.post('/transactions/create', TransactionController.createTransaction);
+router.post('/transactions/update', TransactionController.updateTransactionStatus);
+router.post('/transactions/delete', TransactionController.deletePendingTransaction);
+router.get('/transaction', TransactionController.getTransaction);
+router.get('/transactions/', TransactionController.getTransactions);
 
 export default router;

@@ -12,8 +12,9 @@ app.use(urlencoded({ extended: true }));
 
 import routes from './routes/index';
 import rateLimiter from './middlewares/rateLimit';
+import { jwtAuth } from './middlewares/jwtAuth';
 
-app.use('/api', rateLimiter(1, 1), routes);
+app.use('/api', rateLimiter(1, 20), jwtAuth, routes);
 
 app.get('/', (req, res) => {
   res.status(200).json({

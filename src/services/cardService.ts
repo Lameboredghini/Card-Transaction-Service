@@ -1,4 +1,4 @@
-import { CardCategory } from '../enums/cardCategories';
+import { CardCategory } from '../enums/cardCategories.enum';
 import { v4 as uuidv4 } from 'uuid';
 import { CardDataDao } from '../infra/db/cardDataDao';
 import { UserDao } from '../infra/db/usersDao';
