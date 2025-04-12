@@ -5,6 +5,7 @@ node_modules
 .deployment
 **/.DS_Store
 .npmrc
+coverage
 
 *.log
 *.csv

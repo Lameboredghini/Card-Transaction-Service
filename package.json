@@ -5,24 +5,49 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon src/server.ts"
+    "dev": "nodemon src/server.ts",
+    "lint": "eslint . --quiet --ext .ts,.tsx",
+    "check:cyclic": "madge --circular ./",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@azure/cosmos": "^4.3.0",
+    "eslint-config-prettier": "7.1.0",
     "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "joi": "^17.13.3",
     "pg": "^8.14.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.37.7"
+    "typescript": "^5.8.3",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
-    "@types/node": "^22.14.0",
-    "@types/sequelize": "^4.28.20",
+    "@types/jest": "^29.5.14",
+    "@types/joi": "^17.2.2",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "babel-eslint": "10.1.0",
+    "chai": "^5.2.0",
+    "dotenv": "^16.5.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "jest": "^29.7.0",
+    "madge": "6.1.0",
+    "mocha": "^11.1.0",
     "nodemon": "^3.1.9",
+    "prettier": "2.0.5",
+    "prettier-eslint-cli": "5.0.0",
+    "ts-jest": "^29.3.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "tsconfig-paths": "4.0.0"
   }
 }
