@@ -330,6 +330,8 @@ Tests cover:
 - Deletion rules
 - End-to-end user/card/transaction flow
 
+![database](assets/jestTests.png)
+
 ---
 
 
@@ -349,6 +351,7 @@ For logging and monitoring purposes, errors are sent to Slack.
   - Interfaces
   - Modular architecture
 - **Cyclic Dependency Prevention**: Utilized **Madge** to detect and prevent cyclic dependencies.
+- **Unique Card Generation**: Added a function to **generate unique credit card numbers**, ensuring no duplication occurs.
 - **Testing**: Achieved high test coverage with:
   - Unit tests using **Jest**
   - One full **integration test**
@@ -361,6 +364,8 @@ For logging and monitoring purposes, errors are sent to Slack.
 - **Security & Performance**:
   - **JWT authentication middleware** for secure endpoints
   - **Rate limiter** to prevent abuse and DDoS attacks
+- ** Secure Secrets Management**:  
+  Used `.env` and environment-specific config files to manage sensitive credentials securely.
 
 
 ## 👨‍💻 Author
